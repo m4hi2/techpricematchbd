@@ -1,17 +1,17 @@
-package startech_test
+package ryans_test
 
 import (
-	"github.com/m4hi2/techpricematchbd/pkg/startech"
+	"github.com/m4hi2/techpricematchbd/pkg/ryans"
 	"log"
 	"testing"
 )
 
 func TestSearch(t *testing.T) {
 
-	products, err := startech.SearchProduct("edifier")
+	products, err := ryans.SearchProduct("samsung monitor")
 
 	if err != nil {
-		log.Fatal("STARTECH: error while searching product: ", err)
+		log.Fatal("RYANS: error while searching product: ", err)
 	}
 
 	for i, product := range products {
