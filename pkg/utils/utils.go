@@ -1,6 +1,9 @@
 package utils
 
-import "github.com/PuerkitoBio/goquery"
+import (
+	"github.com/PuerkitoBio/goquery"
+	"strings"
+)
 
 /*
 TakeNSelections - Takes N number of "Selection"s from goquery selection and makes it possible to
@@ -21,4 +24,9 @@ func TakeNSelections(s *goquery.Selection, n int) []*goquery.Selection {
 	})
 
 	return rs
+}
+
+func CleanLinkQParams(s string) string {
+	return strings.Split(s, "?")[0]
+
 }
