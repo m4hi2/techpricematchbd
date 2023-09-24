@@ -56,6 +56,10 @@ func extractNProducts(sp *goquery.Document, n int) ([]pkg.Product, error) {
 			pPriceText = ss[0]
 		}
 
+		if pPriceText == "" {
+			continue
+		}
+
 		pPrice, err := strconv.Atoi(pPriceText)
 		if err != nil {
 			return nil, err

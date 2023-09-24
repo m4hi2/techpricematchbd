@@ -8,7 +8,7 @@ import (
 
 func TestSearch(t *testing.T) {
 
-	products, err := ryans.SearchProduct("samsung monitor")
+	products, err := ryans.SearchProduct("lg 22 inch monitor")
 
 	if err != nil {
 		log.Fatal("RYANS: error while searching product: ", err)
